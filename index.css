@@ -1,0 +1,124 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-container {
+  position: relative;
+  max-width: 900;
+  margin: 5px auto;
+}
+
+.recorder {
+  width: 600px;
+  height: 300px;
+  background-color: lightpink;
+  margin: 0 auto;
+}
+
+/* 波形图 */
+.recwave{
+  width:600px;
+  height:200px;
+  background-color: lightskyblue;
+}
+
+/* 录音按钮 */
+.rec-div {
+  padding: 20px;
+}
+.rec-button-wrapper {
+  display: block;
+  margin: auto;
+  background: lightskyblue;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+}
+.rec-button {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  font-family: 'fontello';
+  font-size: 20px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background: lightpink;
+  background-image: url('./images/microphone.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  transition: transform .3s;
+  transform: scale(1, 1);
+}
+.rec-button-wrapper:hover > #rec-button {
+  transition: transform .3s;
+  transform: scale(1.2, 1.2);
+}
+
+/* 音频结果显示 */
+.output-template {
+  box-shadow: 1px 1px 2px #cccccc;
+  font-size: 14px;
+  margin: 20px 0;
+}
+.output-template .header {
+  position: relative;
+  background: lightskyblue;
+  color: #fff;
+  margin: 0;
+  padding: 10px 20px;
+}
+.output-template .audio-operation {
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.output-template .player {
+  width: 100%;
+  height: 30px;
+  background: #f2f3f4;
+}
+.download-button {
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  margin-top: -10px;
+  background-image: url('./images/download.png');
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 浏览器设置 */
+.browser-setting-wrapper {
+  display: none;
+}
+.browser-setting-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+}
+.chrome-setting-hint {
+  max-width: 1000px;
+  margin: auto;
+}
+.browser-setting-wrapper img {
+  width: 100%;
+}
+.setting-url, .demo-url {
+  border: none;
+  width: 100%;
+}

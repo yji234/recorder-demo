@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="index.css" rel="stylesheet"/>
+    <title>Recording-Demo</title>
+  </head>
+
+  <body>
+    <div class="app-container">
+      <div class="recorder">
+        <div class="recwave"></div>
+        <div class="rec-div">
+          <div class="rec-button-wrapper">
+            <button class="rec-button" id="rec-button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="asr-console"></div>
+    </div>
+    <div class="clone-node" style="display: none;">
+      <div class="output-template">
+        <div class="header">
+          <span class="title">第一段录音：</span>
+          <a class="download-button"></a>
+        </div>
+        <ul class="asr-result"></ul>
+        <audio class="player" src="" controls></audio>
+      </div>
+    </div>
+    <div class="browser-setting-wrapper">
+      <div class="chrome-setting-hint">
+        <h2>如果看到这个提示，说明您需要进行如下设置：</h2>
+        <ol>
+          <li>在浏览器的地址栏中输入该url打开设置页：<input readonly class="setting-url" type="text" value="chrome://flags/#unsafely-treat-insecure-origin-as-secure"><button onclick="CopyText('setting-url')">点击复制地址</button></li>
+          <li>在设置页的输入框中输入demo地址<input readonly class="demo-url" type="text" value="http://0.0.0.0:8889,http://0.0.0.0:8889"><button onclick="CopyText('demo-url')">点击复制地址</button></li>
+          <li>点击Enable并重启浏览器</li>
+        </ol>
+        <img src="./images/hint.png" alt="">
+      </div>
+    </div>
+  <!-- 【1.1】引入核心文件 -->
+  <script src="https://cdn.jsdelivr.net/gh/xiangyuecn/Recorder@latest/src/recorder-core.js"></script>
+
+  <!-- 【1.2】引入相应格式支持文件；如果需要多个格式支持，把这些格式的编码引擎js文件放到后面统统加载进来即可 -->
+  <script src="https://cdn.jsdelivr.net/gh/xiangyuecn/Recorder@latest/src/engine/wav.js"></script>
+
+  <!-- 【1.3】引入可选的扩展支持项，如果不需要这些扩展功能可以不引入 -->
+  <script src="https://cdn.jsdelivr.net/gh/xiangyuecn/Recorder@latest/src/extensions/frequency.histogram.view.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/xiangyuecn/Recorder@latest/src/extensions/lib.fft.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>

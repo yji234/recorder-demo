@@ -17,7 +17,7 @@ onmessage = function(e) {
 };
 
 function start(modelName) {
-  socket = new WebSocket(`ws://221.122.130.17:8009/wss/rtAsr?mod=${modelName}`);
+  socket = new WebSocket('wsUrl');
   socket.addEventListener('open', function(e) {
     postMessage({
       command: 'socket-ready'
